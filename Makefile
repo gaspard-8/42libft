@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/05 16:06:52 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/05 17:47:45 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,15 @@ AR = ar rcs
 NAME = libft.a
 
 # Source files
-SRCS = ft_isalpha.c
+SRCS = ft_isalpha.c \
+		ft_isalnum.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_memset.c \
+		ft_strlen.c \
+		ft_isascii.c \
+		ft_bzero.c \
+		ft_memcpy.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

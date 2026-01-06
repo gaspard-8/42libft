@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/06 15:39:33 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/06 17:18:56 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,30 @@ AR = ar rcs
 NAME = libft.a
 
 # Source files
-SRCS = ./ft_functions/ft_*.c \
+SRCS =  ./ft_functions/ft_isalpha.c \
+		./ft_functions/ft_isalnum.c \
+		./ft_functions/ft_isdigit.c \
+		./ft_functions/ft_isprint.c \
+		./ft_functions/ft_memset.c \
+		./ft_functions/ft_strlen.c \
+		./ft_functions/ft_isascii.c \
+		./ft_functions/ft_bzero.c \
+		./ft_functions/ft_memcpy.c \
+		./ft_functions/ft_memmove.c \
+		./ft_functions/ft_strlcpy.c \
+		./ft_functions/ft_strlcat.c \
+		./ft_functions/ft_toupper.c \
+		./ft_functions/ft_tolower.c \
+		./ft_functions/ft_strchr.c \
+		./ft_functions/ft_strrchr.c \
+		./ft_functions/ft_strncmp.c \
+		./ft_functions/ft_memchr.c \
+		./ft_functions/ft_memcmp.c \
+		./ft_functions/ft_strnstr.c \
+		./ft_functions/ft_atoi.c \
+		./ft_functions/ft_strdup.c \
+		./ft_functions/ft_calloc.c
+
 
 
 # Object files
@@ -51,22 +74,4 @@ re: fclean all
 .PHONY: all clean fclean re
 
 
-# 	ft_isalpha.c \
-# 		ft_isalnum.c \
-# 		ft_isdigit.c \
-# 		ft_isprint.c \
-# 		ft_memset.c \
-# 		ft_strlen.c \
-# 		ft_isascii.c \
-# 		ft_bzero.c \
-# 		ft_memcpy.c \
-# 		ft_memmove.c \
-# 		ft_strlcpy.c \
-# 		ft_strlcat.c \
-# 		ft_toupper.c \
-# 		ft_tolower.c \
-# 		ft_strchr.c \
-# 		ft_strrchr.c \
-# 		ft_strncmp.c \
-# 		ft_memchr.c \
-# 		ft_memcmp.c
+#

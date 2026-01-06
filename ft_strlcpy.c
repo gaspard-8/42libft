@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 13:53:05 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/06 11:32:08 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/06 15:02:01 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	if (size == 0)
 		return (ft_strlen(src));
-	if (ft_strlen(src) <= size - 1 )
+	if (ft_strlen(src) <= size - 1)
 		ft_memcpy(dst, src, ft_strlen(src) + 1);
 	else if (size != 0)
 	{
@@ -27,4 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-

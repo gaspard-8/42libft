@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 14:57:48 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/06 15:03:12 by gtomas           ###   ########.fr       */
+/*   Created: 2026/01/06 14:58:29 by gtomas            #+#    #+#             */
+/*   Updated: 2026/01/06 15:02:33 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	int	i;
+void	*ft_memchr(const void *s, int c, size_t n);
 
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*str;
+
+	str = (unsigned char *) s;
 	i = 0;
-	while (s[i])
-		++i;
-	return (i);
+	while (i < n)
+	{
+		if (str[i] == c)
+			return ((char *) s + i);
+		i++;
+	}
+	return (NULL);
 }

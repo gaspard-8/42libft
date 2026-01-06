@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/06 13:28:05 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/06 14:48:15 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRCS = ft_isalpha.c \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_strchr.c \
-		ft_strrchr.c
+		ft_strrchr.c \
+		ft_strncmp.c \
+		ft_memchr.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)

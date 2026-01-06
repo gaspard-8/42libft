@@ -6,15 +6,15 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 19:08:53 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/05 19:08:54 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/06 15:03:27 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c);
+int	ft_isascii(int c);
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c < 128 && c > 0)
 		return (1);

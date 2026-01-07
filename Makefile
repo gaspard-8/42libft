@@ -41,7 +41,13 @@ SRCS =  ./ft_functions/ft_isalpha.c \
 		./ft_functions/ft_strnstr.c \
 		./ft_functions/ft_atoi.c \
 		./ft_functions/ft_strdup.c \
-		./ft_functions/ft_calloc.c
+		./ft_functions/ft_calloc.c \
+		./ft_functions/ft_substr.c \
+		./ft_functions/ft_strjoin.c \
+		./ft_functions/ft_strtrim.c \
+		./ft_functions/ft_split.c \
+		./ft_functions/ft_itoa.c \
+		./ft_functions/ft_strmapi.c
 
 
 

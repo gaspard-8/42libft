@@ -47,8 +47,16 @@ SRCS =  ./ft_functions/ft_isalpha.c \
 		./ft_functions/ft_strtrim.c \
 		./ft_functions/ft_split.c \
 		./ft_functions/ft_itoa.c \
-		./ft_functions/ft_strmapi.c
-
+		./ft_functions/ft_strmapi.c \
+		./ft_functions/ft_striteri.c \
+		./ft_functions/ft_putchar_fd.c \
+		./ft_functions/ft_putstr_fd.c \
+		./ft_functions/ft_putendl_fd.c \
+		./ft_functions/ft_putnbr_fd.c \
+		./ft_functions/ft_lstnew.c \
+		./ft_functions/ft_lstadd_front.c \
+		./ft_functions/ft_lstsize.c \
+		./ft_functions/ft_lstlast.c
 
 
 # Object files

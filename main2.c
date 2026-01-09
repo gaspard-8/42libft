@@ -15,6 +15,22 @@ void g(unsigned int i, char *s)
 	s[0] = s[0] + 1;
 }
 
+void h(void *addr)
+{
+	char *str = (char *) addr;
+	int i = 0;
+	while(str[i])
+	{
+		str[i] += 1;
+		i++;
+	}
+}
+
+void del(void *addr)
+{
+	addr = NULL;
+}
+
 int main()
 {
 	// test substr
@@ -156,7 +172,12 @@ int main()
 	list1->content = "Salut ";
 	ft_lstadd_front(&list, list1);
 	printf("%s\n", (char *) list->content);
-	printf("%s\n", (char *) (list->next)->content); */
+	printf("%s\n", (char *) (list->next)->content);
+	t_list *list2 = NULL;
+	ft_lstadd_front(&list2, list1);
+	printf("%s\n", (char *) list2->content);
+	printf("%p\n", (char *) (list2->next)); */
+
 
 	// test lstsize
 
@@ -182,7 +203,7 @@ int main()
 
 	// test lstlast
 
-	t_list *longlist;
+	/* t_list *longlist;
 	t_list *node;
 	longlist = malloc(sizeof(t_list *));
 	longlist->content = "b";
@@ -198,5 +219,95 @@ int main()
 	ft_lstadd_front(&longlist, node);
 	printf("%s, %p\n", (char *) ft_lstlast(longlist)->content, ft_lstlast(longlist)->next);
 	node = NULL;
-	printf(" %p\n",(void *) ft_lstlast(node));
+	printf(" %p\n",(void *) ft_lstlast(node)); */
+
+	// test lstadd_back
+
+	/* t_list *longlist;
+	t_list *node;
+	longlist = malloc(sizeof(t_list *));
+	longlist->content = "a";
+	longlist->next = NULL;
+	for (int i = 0; i < 100; i++)
+	{
+		node = malloc(sizeof(t_list *));
+		node->content = "a";
+		ft_lstadd_front(&longlist, node);
+	}
+	node = malloc(sizeof(t_list *));
+	node->content = "b";
+	ft_lstadd_back(&longlist, node);
+	printf("%s, %p\n", (char *) ft_lstlast(longlist)->content, ft_lstlast(longlist)->next);
+	t_list *empty = NULL;
+	ft_lstadd_back(&empty, node);
+	printf("%s, %p\n", (char *) ft_lstlast(empty)->content, ft_lstlast(empty)->next); */
+
+	//test lstdelone USE VALGRIND
+
+	/* t_list *list;
+	list = malloc(sizeof(t_list *));
+	list->content = "a";
+	t_list *node;
+	node = malloc(sizeof(t_list *));
+	node->content = "b";
+	node->next = NULL;
+	list->next = node;
+	ft_lstdelone(list, &del);
+	printf("%s\n", (char *) node->content);
+	ft_lstdelone(node, &del); */
+
+	// test ft_lstclear
+
+	/* t_list *node;
+	t_list *longlist = malloc(sizeof(t_list *));
+	longlist->content = "a";
+	longlist->next = NULL;
+	for (int i = 0; i < 100; i++)
+	{
+		node = malloc(sizeof(t_list *));
+		node->content = "a";
+		ft_lstadd_front(&longlist, node);
+	}
+	// t_list *cursor = (longlist->next->next->next);
+	ft_lstclear(&(longlist->next->next->next), del);
+	printf("%p\n", longlist->next->next->next);
+	printf("%d\n", ft_lstsize(longlist));
+	t_list *test = NULL;
+	ft_lstclear(&test, del);
+	if (!test)
+		printf("NULL OK"); */
+
+	// test ft_lstiter
+
+	/* t_list *longlist;
+	t_list *node;
+	longlist = malloc(sizeof(t_list *));
+	char fin[] = "Fin";
+	char debut[] = "Debut";
+	char abc[] = "abc";
+	char *str;
+	longlist->content = fin;
+	longlist->next = NULL;
+	for (int i = 0; i < 20; i++)
+	{
+		str = ft_strdup(abc);
+		node = malloc(sizeof(t_list *));
+		node->content = (void *)str;
+		ft_lstadd_front(&longlist, node);
+	}
+	node = malloc(sizeof(t_list *));
+	node->content = debut;
+	ft_lstadd_front(&longlist, node);
+	ft_lstiter(longlist, h);
+	t_list *cursor = longlist;
+	for (int i = 0; i < ft_lstsize(longlist); i++)
+	{
+		printf("list %d; content : %s\n pointer : %p\n", i, (char *) cursor->content, cursor->next);
+		cursor = cursor->next;
+	}
+	printf("%s", abc);
+	h(abc);
+	printf("%s", abc); */
+
+
 }

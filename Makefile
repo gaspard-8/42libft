@@ -56,7 +56,12 @@ SRCS =  ./ft_functions/ft_isalpha.c \
 		./ft_functions/ft_lstnew.c \
 		./ft_functions/ft_lstadd_front.c \
 		./ft_functions/ft_lstsize.c \
-		./ft_functions/ft_lstlast.c
+		./ft_functions/ft_lstlast.c \
+		./ft_functions/ft_lstadd_back.c \
+		./ft_functions/ft_lstdelone.c \
+		./ft_functions/ft_lstclear.c \
+		./ft_functions/ft_lstiter.c \
+		./ft_functions/ft_lstmap.c
 
 
 # Object files

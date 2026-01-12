@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/06 17:18:56 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/12 15:22:34 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ AR = ar rcs
 NAME = libft.a
 
 # Source files
-SRCS =  ./ft_functions/ft_isalpha.c \
+SRCS =	./ft_functions/ft_isalpha.c \
 		./ft_functions/ft_isalnum.c \
 		./ft_functions/ft_isdigit.c \
 		./ft_functions/ft_isprint.c \

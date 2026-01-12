@@ -59,11 +59,11 @@ int main()
 
 	// test strtrim
 
-	/* char *s1 = "Salut la team aaaa";
+	char *s1 = "  Salut la team aaaa";
 	printf("%s\n", ft_strtrim(s1, "a"));
-	printf("%s\n", ft_strtrim(s1, "alm"));
+	printf("%s\n", ft_strtrim(s1, "alm "));
 	printf("%s\n", ft_strtrim(s1, " "));
-	printf("%s\n", ft_strtrim(s1, "")); */
+	printf("%s\n", ft_strtrim(s1, ""));
 
 	// test split
 
@@ -317,31 +317,31 @@ int main()
 
 	// test lstmap
 
-	t_list *longlist;
-	t_list *node;
-	longlist = malloc(sizeof(t_list *));
-	char fin[] = "Fin";
-	char debut[] = "Debut";
-	char abc[] = "abc";
-	char *str;
-	longlist->content = fin;
-	longlist->next = NULL;
-	for (int i = 0; i < 20; i++)
-	{
-		str = ft_strdup(abc);
-		node = malloc(sizeof(t_list *));
-		node->content = (void *)str;
-		ft_lstadd_front(&longlist, node);
-	}
-	node = malloc(sizeof(t_list *));
-	node->content = (void *)debut;
-	ft_lstadd_front(&longlist, node);
-	t_list *copy = ft_lstmap(longlist, &k, &del);
-	while (copy)
-	{
-		printf("%s\n", (char *) copy->content);
-		copy = copy->next;
-	}
+	// t_list *longlist;
+	// t_list *node;
+	// longlist = malloc(sizeof(t_list *));
+	// char fin[] = "Fin";
+	// char debut[] = "Debut";
+	// char abc[] = "abc";
+	// char *str;
+	// longlist->content = fin;
+	// longlist->next = NULL;
+	// for (int i = 0; i < 20; i++)
+	// {
+	// 	str = ft_strdup(abc);
+	// 	node = malloc(sizeof(t_list *));
+	// 	node->content = (void *)str;
+	// 	ft_lstadd_front(&longlist, node);
+	// }
+	// node = malloc(sizeof(t_list *));
+	// node->content = (void *)debut;
+	// ft_lstadd_front(&longlist, node);
+	// t_list *copy = ft_lstmap(longlist, &k, &del);
+	// while (copy)
+	// {
+	// 	printf("%s\n", (char *) copy->content);
+	// 	copy = copy->next;
+	// }
 
 
 

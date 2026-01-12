@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/12 15:18:07 by gtomas            #+#    #+#             */
+/*   Updated: 2026/01/12 16:43:55 by gtomas           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char			*ft_substr(char const *s, unsigned int start, size_t len);
-static int		min(int a, int b);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+static int	min(int a, int b);
 
-static int		min(int a, int b)
+static int	min(int a, int b)
 {
 	if (a < b)
 		return (a);
 	else
 		return (b);
 }
-
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -35,4 +46,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substring[min((ft_strlen(s) - start), len)] = 0;
 	return (substring);
 }
-

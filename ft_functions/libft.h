@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:43:56 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/06 17:19:01 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/12 16:46:33 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-#include <unistd.h>
+# include <unistd.h>
 
 //list type
-typedef struct	s_list
+typedef struct s_list
 {
-void			*content;
-struct s_list	*next;
-}				t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 //libc functiions
 int		ft_isalpha(int c);
@@ -61,7 +61,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-
 //linked lists
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -72,6 +71,5 @@ void	ft_lstdelone(t_list *lst, void (*del) (void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
 
 #endif

@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/12 15:22:34 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/12 17:04:24 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,7 @@ OBJS = $(SRCS:.c=.o)
 
 # Default target
 all: $(NAME)
+
 
 # Compile the binary
 $(NAME): $(OBJS)

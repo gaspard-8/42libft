@@ -4,15 +4,26 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!lst)
-		return (NULL);
-	t_list *copy;
-	t_list *cursor;
+	t_list	*cursor;
+	t_list	*copy;
 
-	copy = ft_lstnew()
-	while (lst != NULL)
+	if (!lst || !f || !del)
+		return (NULL);
+	copy = ft_lstnew((*f)(lst->content));
+	if (!copy)
+		return (NULL);
+	cursor = copy;
+	lst = lst->next;
+	while (lst)
 	{
-		copy = malloc (sizeof(t_list *));
-		copy-content
+		cursor->next = ft_lstnew((*f)(lst->content));
+		if (!(cursor->next))
+		{
+			ft_lstclear((&copy), del);
+			return (NULL);
+		}
+		cursor = cursor->next;
+		lst = lst->next;
 	}
+	return (copy);
 }

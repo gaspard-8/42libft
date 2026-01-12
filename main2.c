@@ -26,6 +26,12 @@ void h(void *addr)
 	}
 }
 
+void *k(void *addr)
+{
+	h(addr);
+	return (addr);
+}
+
 void del(void *addr)
 {
 	addr = NULL;
@@ -308,6 +314,35 @@ int main()
 	printf("%s", abc);
 	h(abc);
 	printf("%s", abc); */
+
+	// test lstmap
+
+	t_list *longlist;
+	t_list *node;
+	longlist = malloc(sizeof(t_list *));
+	char fin[] = "Fin";
+	char debut[] = "Debut";
+	char abc[] = "abc";
+	char *str;
+	longlist->content = fin;
+	longlist->next = NULL;
+	for (int i = 0; i < 20; i++)
+	{
+		str = ft_strdup(abc);
+		node = malloc(sizeof(t_list *));
+		node->content = (void *)str;
+		ft_lstadd_front(&longlist, node);
+	}
+	node = malloc(sizeof(t_list *));
+	node->content = (void *)debut;
+	ft_lstadd_front(&longlist, node);
+	t_list *copy = ft_lstmap(longlist, &k, &del);
+	while (copy)
+	{
+		printf("%s\n", (char *) copy->content);
+		copy = copy->next;
+	}
+
 
 
 }

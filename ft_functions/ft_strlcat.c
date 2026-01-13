@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 10:03:11 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/06 14:57:56 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 10:28:42 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	unsigned int	i;
 	unsigned int	size_dst;
 	unsigned int	j;
+
+	if (!dst && size == 0)
+		return (ft_strlen(src));
 
 	i = 0;
 	j = 0;

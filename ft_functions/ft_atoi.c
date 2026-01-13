@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:20:13 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/12 16:37:15 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 10:44:55 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,16 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 
 	sign = 1;
-	if (nptr[0] == '-')
-	{
-		sign = -1;
-		nptr++;
-	}
 	i = 0;
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n' ||
+		nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
 	return_nb = 0;
 	if (!(nptr[i] >= '0' && nptr[i] <= '9' ))
 		return (0);

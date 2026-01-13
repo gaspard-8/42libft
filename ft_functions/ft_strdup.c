@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:19:27 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/12 15:19:28 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 10:57:54 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	dest = malloc(ft_strlen(s) + 1);
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (i < ft_strlen(s))
 	{

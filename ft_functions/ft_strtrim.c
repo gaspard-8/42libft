@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:18:11 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/12 16:42:50 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 11:46:19 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static int	count_char(char const *s1, char const *set)
 		i++;
 	}
 	i = ft_strlen(s1);
+	if (count == i)
+		return (count);
 	while (i > 0 && is_in_set(s1[i - 1], set))
 	{
 		count++;
@@ -73,6 +75,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j++;
 		i++;
 	}
-	str[ft_strlen(s1) - count_char(s1, set) + 1] = 0;
+	str[ft_strlen(s1) - count_char(s1, set)] = 0;
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:19:54 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/12 15:19:55 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 12:05:52 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		(*f)(lst->content);
 		lst = lst->next;
+		
 	}
 }

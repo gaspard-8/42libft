@@ -6,7 +6,7 @@
 /*   By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 15:01:19 by gtomas            #+#    #+#             */
-/*   Updated: 2026/01/06 15:01:20 by gtomas           ###   ########.fr       */
+/*   Updated: 2026/01/13 10:25:11 by gtomas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *) s + i);
 		i++;
 	}
+	if (s[i] == c)
+			return ((char *) s + i);
 	return (NULL);
 }

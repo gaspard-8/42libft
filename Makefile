@@ -6,7 +6,7 @@
 #    By: gtomas <gtomas@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 15:34:08 by gtomas            #+#    #+#              #
-#    Updated: 2026/01/12 17:04:38 by gtomas           ###   ########.fr        #
+#    Updated: 2026/01/13 13:22:05 by gtomas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,6 +78,7 @@ $(NAME): $(OBJS)
 # Compile object files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
 
 # Clean object files
 clean:

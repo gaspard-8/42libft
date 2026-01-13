@@ -22,6 +22,10 @@ Makefile commands :
 
 No specific ressources were necessary to write this project. For the first part the description of each function can be found using the man command. 
 
+### Ai usage
+
+Ai was only used to clarify some edge cases, and get explanations on general concepts/conventions. All the code is original and written independantely.
+
 ## **Library description**
 
 //list type
